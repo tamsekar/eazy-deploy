@@ -15,7 +15,7 @@ def platform_check():
         print "Unknown OS"
 
 def call_shell():
-    session = subprocess.Popen(['test.sh'], stdout=PIPE, stderr=PIPE)
+    session = subprocess.Popen(['syspack.sh'], stdout=PIPE, stderr=PIPE)
     stdout, stderr = session.communicate()
 
     if stderr:
