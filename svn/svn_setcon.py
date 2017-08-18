@@ -8,7 +8,7 @@ import os
 import pprint
 
 
-# Color Formattijng
+# Color Formatting
 
 class bcolors:
     HEADER = '\033[95m'
@@ -24,7 +24,6 @@ class bcolors:
 print (bcolors.HEADER + "OS Information" + bcolors.ENDC)
 
 
-#print_function
 
 def dist():
     print("""
