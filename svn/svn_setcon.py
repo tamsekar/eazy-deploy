@@ -82,10 +82,11 @@ def sysstat():
 
 def main():
     dist()
+
+
+if __name__ == "__main__":
+    main()
     cpuinfo()
     cpuinfo = cpuinfo()
     for processor in cpuinfo.keys():
         print (cpuinfo[processor]['model name'])
-
-if __name__ == "__main__":
-    main()
