@@ -82,7 +82,7 @@ def sysstat():
 
 def main():
     dist()
-    sysstat()
+    cpuinfo()
 
 if __name__ == "__main__":
     main()
