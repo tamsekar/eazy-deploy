@@ -6,6 +6,8 @@ import sys
 import platform
 import os
 import pprint
+import pdb
+pdb.set_trace()
 
 
 # Color Formatting
@@ -72,9 +74,7 @@ def cpuinfo():
                     procinfo[line.split(':')[0].strip()] = ''
 
     return cpuinfo
-    cpuinfo = cpuinfo()
-    for processor in cpuinfo.keys():
-        print (cpuinfo[processor]['model name'])
+
 
 
 def sysstat():
@@ -83,6 +83,9 @@ def sysstat():
 def main():
     dist()
     cpuinfo()
+    cpuinfo = cpuinfo()
+    for processor in cpuinfo.keys():
+        print (cpuinfo[processor]['model name'])
 
 if __name__ == "__main__":
     main()
