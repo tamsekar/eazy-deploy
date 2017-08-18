@@ -142,7 +142,7 @@ def sysstat():
 def main():
     dist()
     detect_devs()
-    getusers()
+    #getusers()
 
 if __name__ == "__main__":
     main()
@@ -153,10 +153,13 @@ if __name__ == "__main__":
         CPU: %s
         """ % (cpuinfo[processor]['model name']))
     meminfo = meminfo()
+    print (bcolors.OKGREEN + "Memory" + bcolors.ENDC)
     print('Total memory: {0}'.format(meminfo['MemTotal']))
     print('Free memory: {0}'.format(meminfo['MemFree']))
     netdevs = netdevs()
     for dev in netdevs.keys():
+        print (bcolors.OKGREEN + "Network" + bcolors.ENDC)
         print('{0}: {1} MiB {2} MiB'.format(dev, netdevs[dev].rx, netdevs[dev].tx))
     pids = process_list()
+    print (bcolors.OKGREEN + "Processes" + bcolors.ENDC)
     print('Total number of running processes:: {0}'.format(len(pids)))
