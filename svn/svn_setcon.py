@@ -45,9 +45,8 @@ def dist():
     ))
 
 
-def sysstat():
-    def cpuinfo():
-        ''' Return the information in /proc/cpuinfo
+def cpuinfo():
+    ''' Return the information in /proc/cpuinfo
     as a dictionary in the following format:
     cpu_info['proc0']={...}
     cpu_info['proc1']={...}
@@ -76,7 +75,11 @@ def sysstat():
     cpuinfo = cpuinfo()
     for processor in cpuinfo.keys():
         print (cpuinfo[processor]['model name'])
-        
+
+
+def sysstat():
+    cpuinfo()
+
 def main():
     dist()
     sysstat()
