@@ -3,6 +3,7 @@
 from sys import platform
 import subprocess
 from subprocess import Popen, PIPE
+import sys
 
 def platform_check():
     if platform == "linux" or platform == "linux2":
