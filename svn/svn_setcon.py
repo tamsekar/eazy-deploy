@@ -1,11 +1,10 @@
 #! /usr/bin/env python
 
-
+from __future__ import print_function
+from collections import OrderedDict
 import sys
 import platform
 import os
-from __future__ import print_function
-from collections import OrderedDict
 import pprint
 
 
@@ -21,11 +20,11 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print bcolors.HEADER + "OS Information"
-      + bcolors.ENDC
+
+print (bcolors.HEADER + "OS Information" + bcolors.ENDC)
 
 
-print_function
+#print_function
 
 def dist():
     print("""
@@ -48,9 +47,7 @@ def dist():
 
 
 def main():
-    platform_check()
-    call_shell()
-    linux_distribution()
+    dist()
 
 if __name__ == "__main__":
     main()
